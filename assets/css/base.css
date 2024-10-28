@@ -1,5 +1,5 @@
 body {
-  background-color: blanchedalmond;
+  background-color: darksalmon;
 }
 
 p {
@@ -12,6 +12,7 @@ p {
 }
 
 h1 {
+  margin-bottom: 70px;
   color: darkslategray;
   font-family: "lucida console", "courier new", monospace;
   text-align: center;
