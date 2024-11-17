@@ -38,7 +38,7 @@ function draw() {
   ellipse(width / 2, height / 2, 100, 100);
 
   fill("darkred");
-  rect(width/ 0, heigth/ 2, 400, 200);
+  rect(0, 200, 400, 200);
 
   fill("brown");
   stroke("darkred");
