@@ -1,0 +1,70 @@
+//HTML
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <main>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
+
+//CSS
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+function keyPressed() {
+  if (key === 's') {
+    const name = prompt(
+      'Enter name',
+      `out-${Date.now()}.png`
+    );
+    save(name);
+  }
+}
+
+//JS
+function setup() {
+  createCanvas(200, 200);
+}
+
+function draw() {
+  background("black");
+
+  stroke("black");
+  fill("darkgrey");
+  rect(10, 10, 180, 180);
+
+  stroke("dimgrey");
+
+  fill("gold");
+  ellipse(50, 50, 50, 50);
+
+  fill("dimgrey");
+  triangle(5, 60, 110, 50, 50, 10);
+
+  fill("dimgrey");
+  rect(45, 0, 10, 50);
+
+  stroke("gold");
+  line(40, 60, 10, 160);
+  line(40, 60, 30, 140);
+  line(40, 60, 50, 150);
+  line(45, 60, 80, 160);
+  line(45, 60, 65, 150);
+  line(50, 60, 90, 160);
+  line(55, 60, 100, 150);
+  line(60, 60, 120, 150);
+  line(65, 60, 150, 130);
+}
