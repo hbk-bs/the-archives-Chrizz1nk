@@ -1,3 +1,4 @@
+
 let radiusGroßerKreis = 100; 
 let radiusKleinerKreis = 20; 
 let winkel = 0; 
