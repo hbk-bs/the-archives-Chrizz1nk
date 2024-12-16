@@ -1,3 +1,5 @@
+
+
 let x, y;        
 let dx, dy;      
 let middleX;     
@@ -12,11 +14,11 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(30);
 
   
   ellipse(x, y, 50, 50);
-  fill("red");
+  fill("white");
 
   
   x += dx;
