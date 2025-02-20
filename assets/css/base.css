@@ -1,0 +1,26 @@
+body {
+  background-color: darksalmon;
+}
+
+p {
+  border-style: solid;
+  border-top-width: 15px;
+  border-color: gray;
+  font-family: "lucida console", "courier new", monospace;
+  font-size: 18px;
+  color: darkslategray;
+}
+
+h1 {
+  margin-bottom: 70px;
+  color: darkslategray;
+  font-family: "lucida console", "courier new", monospace;
+  text-align: center;
+}
+
+p1 {
+  color: darkslategray;
+  text-align: start;
+  font-family: "lucid console", "courier new", monospace;
+  font-size: 18px;
+}
