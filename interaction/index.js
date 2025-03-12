@@ -1,76 +1,9 @@
-// CSS Styling als JavaScript
-const style = document.createElement("style");
-style.textContent = `
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        background-color: #222;
-        color: white;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    .game-container {
-        text-align: center;
-        font-family: "Arial", sans-serif;
-    }
-
-    #gameCanvas {
-        border: 5px solid #00ff00;
-        background-color: #1e1e1e;
-    }
-
-    .score {
-        font-size: 18px;
-        color: #ff1493;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-
-    #startMessage, #restartMessage {
-        font-size: 20px;
-        color: yellow;
-        margin-top: 10px;
-    }
-`;
-document.head.appendChild(style);
-
-// Spiellogik
-const canvas = document.createElement("canvas");
-canvas.id = "gameCanvas";
-canvas.width = 400;
-canvas.height = 400;
-document.body.appendChild(canvas);
-
-const startMessage = document.createElement("div");
-startMessage.id = "startMessage";
-startMessage.textContent = "Klicke auf das Spielfeld, um zu starten!";
-document.body.appendChild(startMessage);
-
-const restartMessage = document.createElement("div");
-restartMessage.id = "restartMessage";
-restartMessage.textContent = "Spiel vorbei! Klicke zum Neustart.";
-restartMessage.style.display = "none";
-document.body.appendChild(restartMessage);
-
-const scoreText = document.createElement("div");
-scoreText.id = "score";
-scoreText.className = "score";
-scoreText.textContent = "Score: 0";
-document.body.appendChild(scoreText);
-
+const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+
+const startMessage = document.getElementById("startMessage");
+const restartMessage = document.getElementById("restartMessage");
+const scoreText = document.getElementById("score");
 
 const scale = 20;
 const rows = canvas.height / scale;
