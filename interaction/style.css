@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #222;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+#gameCanvas {
+  border: 5px solid #00ff00;
+  background-color: #1e1e1e;
+}
+
+.score {
+  font-size: 18px;
+  color: #ff1493;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+canvas.addEventListener("click", () => {
+    if (!gameStarted) {
+        gameStarted = true;
+        document.getElementById("startMessage").style.display = "none"; // Startnachricht ausblenden
+        setup(); // Das Spiel Setup wird aufgerufen
+        gameLoop(); // Spiel-Loop starten
+    }
+});
+
