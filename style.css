@@ -29,6 +29,7 @@ p {
 	color: white;
 	align-items: center;
 	justify-content: center;
+    line-height: 25px;
 }
 /* Container */
 .container {
