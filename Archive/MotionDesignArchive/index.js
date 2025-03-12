@@ -5,7 +5,7 @@ style.innerHTML = `
 /* Allgemeines Styling */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #ffefa8;
+  background-color:rgb(252, 233, 147);
   color: #333;
   margin: 0;
   padding: 0;
