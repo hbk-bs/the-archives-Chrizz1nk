@@ -38,9 +38,9 @@ body {
 canvas.addEventListener("click", () => {
     if (!gameStarted) {
         gameStarted = true;
-        document.getElementById("startMessage").style.display = "none"; // Startnachricht ausblenden
-        setup(); // Das Spiel Setup wird aufgerufen
-        gameLoop(); // Spiel-Loop starten
+        document.getElementById("startMessage").style.display = "none"; 
+        setup(); 
+        gameLoop(); 
     }
 });
 
