@@ -20,6 +20,7 @@ style.textContent = `
         width: 100%;
         text-align: center;
         padding: 20px 0;
+        font-size: larger;
     }
 
     p {
@@ -33,6 +34,7 @@ style.textContent = `
         align-items: center;
         justify-content: center;
         line-height: 25px;
+        font-size: larger;
     }
 
     /* Container */
@@ -54,6 +56,7 @@ style.textContent = `
         flex-direction: column;
         gap: 20px;
         align-items: center;
+        font-size: x-large;
     }
 
     .archive-list li {
@@ -70,7 +73,7 @@ style.textContent = `
     .archive-list a {
         text-decoration: none;
         color: #ffffff;
-        font-size: 18px;
+        font-size: 20px;
     }
 
     /* Responsivität */
