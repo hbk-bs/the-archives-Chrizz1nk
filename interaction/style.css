@@ -35,12 +35,3 @@ body {
   font-weight: bold;
 }
 
-canvas.addEventListener("click", () => {
-    if (!gameStarted) {
-        gameStarted = true;
-        document.getElementById("startMessage").style.display = "none"; // Startnachricht ausblenden
-        setup(); // Das Spiel Setup wird aufgerufen
-        gameLoop(); // Spiel-Loop starten
-    }
-});
-

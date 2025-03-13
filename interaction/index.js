@@ -1,3 +1,4 @@
+
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -139,3 +140,4 @@ function endGame() {
   gameStarted = false; // Stoppe das Spiel
   document.getElementById("restartMessage").style.display = "block"; // Zeige Restart-Nachricht an
 }
+
