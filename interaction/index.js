@@ -141,3 +141,7 @@ function endGame() {
   document.getElementById("restartMessage").style.display = "block"; // Zeige Restart-Nachricht an
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("DOM geladen! Starte Spiel...");
+  setup(); // Starte das Spiel-Setup nach dem Laden
+});
