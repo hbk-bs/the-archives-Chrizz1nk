@@ -1,0 +1,71 @@
+/* Allgemeines Styling */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #ffefa8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+header {
+    background-color: #4e2323;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: larger;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Eingabe & Button */
+input[type="file"] {
+    padding: 10px;
+    border: 2px solid #4e2323;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4e2323;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #6a2e2e;
+}
+
+/* Bild-Vorschau */
+#imagePreview img {
+    max-width: 300px;
+    border: 2px solid #4e2323;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Responsivität */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
