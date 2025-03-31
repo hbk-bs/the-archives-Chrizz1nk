@@ -33,7 +33,7 @@ style.textContent = `
         display: flex;
         align-items: center;
         justify-content: center;
-        line-height: 25px;
+        line-height: 40px;
         font-size: larger;
     }
 
