@@ -1,0 +1,137 @@
+//HTML
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <main>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
+
+//CSS
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;function keyPressed() {
+  if (key === 's') {
+    const name = prompt(
+      'Enter name',
+      `out-${Date.now()}.png`
+    );
+    save(name);
+  }
+}
+  
+
+//JS
+// this is a comment
+//. this is global scope
+
+const mytext = "Hello World";
+
+function setup() {
+  // this is function scope
+  // setup is executed once
+  createCanvas(400, 250);
+  background("black");
+}
+
+function draw() {
+  // this is function scope
+  // draw is executed all the time
+  //background("black");
+  fill("yellow");
+  rect(0, 0, 400, 10);
+  stroke("red");
+
+  fill("blue");
+  rect(0, 10, 400, 10);
+
+  fill("red");
+  rect(0, 20, 400, 10);
+
+  fill("yellow");
+  rect(0, 30, 400, 10);
+
+  fill("blue");
+  rect(0, 40, 400, 10);
+
+  fill("red");
+  rect(0, 50, 400, 10);
+
+  fill("yellow");
+  rect(0, 60, 400, 10);
+
+  fill("blue");
+  rect(0, 70, 400, 10);
+
+  fill("red");
+  rect(0, 20, 400, 10);
+
+  fill("yellow");
+  rect(0, 80, 400, 10);
+
+  fill("blue");
+  rect(0, 90, 400, 10);
+
+  fill("red");
+  rect(0, 100, 400, 10);
+
+  fill("yellow");
+  rect(0, 110, 400, 10);
+
+  fill("blue");
+  rect(0, 120, 400, 10);
+
+  fill("red");
+  rect(0, 130, 400, 10);
+
+  fill("yellow");
+  rect(0, 140, 400, 10);
+
+  fill("blue");
+  rect(0, 150, 400, 10);
+
+  fill("red");
+  rect(0, 160, 400, 10);
+
+  fill("yellow");
+  rect(0, 170, 400, 10);
+
+  fill("blue");
+  rect(0, 180, 400, 10);
+
+  fill("red");
+  rect(0, 190, 400, 10);
+
+  fill("yellow");
+  rect(0, 200, 400, 10);
+
+  fill("blue");
+  rect(0, 210, 400, 10);
+
+  fill("red");
+  rect(0, 220, 400, 10);
+
+  fill("yellow");
+  rect(0, 230, 400, 10);
+
+  fill("blue");
+  rect(0, 240, 400, 10);
+}
+
+function keyPressed() {
+  if (key === "s") {
+    const name = prompt("Enter name", `out-${Date.now()}.png`);
+    save(colorintensity);
+  }
+}
