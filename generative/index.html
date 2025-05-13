@@ -65,10 +65,10 @@
         const x = centerX + r * Math.cos(angle);
         const y = flowerCenterY + r * Math.sin(angle);
 
-        const hue = (i * 0.5) % 360;
+        const hue = (i * 0.5) % 100;
         ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
         ctx.beginPath();
-        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.arc(x, y, Math.random() * 10, 0, Math.PI * 2);
         ctx.fill();
       }
       if (n < maxDots) {
