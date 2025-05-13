@@ -1,0 +1,33 @@
+//HTML
+
+
+//CSS
+body {
+	margin: 0 auto;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+//JS
+const mytext = "Hello World";
+
+function setup() {
+	colorMode(HSL, 360, 100, 100, 100);
+	// this is function scope
+	// setup is executed once
+	createCanvas(500, 500);
+	background("black");
+}
+
+function draw() {
+	noStroke();
+	fill(random(230, 200), 50, 50, random(30));
+	let x = random(0, 500);
+	let y = random(0, 500);
+
+	circle(x, y, random(20));
+}

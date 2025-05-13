@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Generative Blume – Natur & Wachstum</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #e0ffe0, #a0d0a0);
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+  const canvas = document.getElementById("canvas");
+  const ctx = canvas.getContext("2d");
+
+  let w = canvas.width = window.innerWidth;
+  let h = canvas.height = window.innerHeight;
+
+  const centerX = w / 2;
+  const groundY = h * 0.95;
+  const goldenAngle = Math.PI * (3 - Math.sqrt(5));
+  const radius = 5;
+  const maxDots = 800;
+
+  let n = 0;
+  let stemHeight = 0;
+  const maxStemHeight = h * 0.4;
+  const stemSpeed = 2;
+
+  let drawingState = "stem"; // stem -> flower -> leaves
+  let leafCount = 10;
+  let leafGrowth = 0;
+  const maxLeafLength = 60;
+
+  function draw() {
+    ctx.clearRect(0, 0, w, h);
+
+    // 🌱 Stängel
+    ctx.beginPath();
+    ctx.strokeStyle = "#2e8b57";
+    ctx.lineWidth = 6;
+    ctx.moveTo(centerX, groundY);
+    ctx.lineTo(centerX, groundY - stemHeight);
+    ctx.stroke();
+
+    const flowerCenterY = groundY - maxStemHeight;
+
+    if (drawingState === "stem") {
+      stemHeight += stemSpeed;
+      if (stemHeight >= maxStemHeight) {
+        drawingState = "flower";
+      }
+
+    } else if (drawingState === "flower") {
+      for (let i = 0; i < n; i++) {
+        const angle = i * goldenAngle;
+        const r = radius * Math.sqrt(i);
+        const x = centerX + r * Math.cos(angle);
+        const y = flowerCenterY + r * Math.sin(angle);
+
+        const hue = (i * 0.5) % 100;
+        ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+        ctx.beginPath();
+        ctx.arc(x, y, Math.random() * 10, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      if (n < maxDots) {
+        n++;
+      } else {
+        drawingState = "leaves";
+      }
+
+    } else if (drawingState === "leaves") {
+      // 🌸 Blüte bleibt sichtbar
+      for (let i = 0; i < maxDots; i++) {
+        const angle = i * goldenAngle;
+        const r = radius * Math.sqrt(i);
+        const x = centerX + r * Math.cos(angle);
+        const y = flowerCenterY + r * Math.sin(angle);
+        const hue = (i * 0.5) % 360;
+        ctx.fillStyle = `hsl(${hue}, 70%, 60%)`;
+        ctx.beginPath();
+        ctx.arc(x, y, 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 🌿 Außenblätter mit Umriss & Blütenfarben
+      const baseRadius = radius * Math.sqrt(maxDots);
+      for (let i = 0; i < leafCount; i++) {
+        const angle = (2 * Math.PI / leafCount) * i;
+        const baseX = centerX + baseRadius * Math.cos(angle);
+        const baseY = flowerCenterY + baseRadius * Math.sin(angle);
+
+        const endX = centerX + (baseRadius + leafGrowth) * Math.cos(angle);
+        const endY = flowerCenterY + (baseRadius + leafGrowth) * Math.sin(angle);
+
+        const controlOffset = leafGrowth * 0.5;
+        const perpAngle = angle + Math.PI / 2;
+
+        const cp1X = baseX + controlOffset * Math.cos(perpAngle);
+        const cp1Y = baseY + controlOffset * Math.sin(perpAngle);
+        const cp2X = baseX - controlOffset * Math.cos(perpAngle);
+        const cp2Y = baseY - controlOffset * Math.sin(perpAngle);
+
+        const hue = (Math.random() * 360 + i * 5) % 360;
+        ctx.strokeStyle = `hsl(${hue}, 70%, 60%)`;
+        ctx.lineWidth = 1.5;
+
+        ctx.beginPath();
+        ctx.moveTo(baseX, baseY);
+        ctx.bezierCurveTo(cp1X, cp1Y, cp1X, cp1Y, endX, endY);
+        ctx.bezierCurveTo(cp2X, cp2Y, cp2X, cp2Y, baseX, baseY);
+        ctx.stroke();
+      }
+
+      if (leafGrowth < maxLeafLength) {
+        leafGrowth += 0.8;
+      }
+    }
+
+    requestAnimationFrame(draw);
+  }
+
+  draw();
+
+  window.addEventListener("resize", () => {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  });
+</script>
+</body>
+</html>

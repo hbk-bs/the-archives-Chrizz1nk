@@ -1,0 +1,199 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archiv mit Flexbox</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Algorithm - Zufallsexperiment - Wo setzt die Mehrheit ihre Kreise? </h1>
+    <p> Im Auftrag von diesem Projekt, wurden die Befragten zufällig gewählt und unabhängig befragt, in einer zufälligen Ecke einen Kreis zu setzen. Diese habe ich dann zusammengeführt und analysiert.
+       Das Ergebnis wird auffällig, da die Mehrheit den Kreis in die obere Linke Ecke gesetzt hat. Dabei hat keiner den Kreis nach unten gezeichnet.
+      Dieses Experiment zeigt nichts besonderes. Es wurde aus reiner Kuriosität meinerseits angefertigt und hat diese Ergebnisse getragen.</p>
+          </td>
+  </header>
+
+  <section class="archive">
+    <div class="archive-item">
+      <h2> 1</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0450.jpeg" class="Algorithm Bilder" alt="Kreis oben Rechts">
+          <p>Kreis oben Rechts</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2> 2</h2>
+      <p>
+      <table>
+        <tr>
+
+          <td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0444.jpeg" class="Algorithm Bilder" alt="Kreis oben Links & Rechts">
+
+            <p>Kreis oben Rechts + Kreis oben Links </p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2> 3</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0445.jpeg" class="Algorithm Bilder" alt="Kreis oben Link">
+          <p>Kreis oben Links</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2> 4</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0446.jpeg" class="Algorithm Bilder" alt="Kreis oben Links">
+          <p>Kreis oben Links</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2> 5</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0447.jpeg" class="Algorithm Bilder" alt="Kreis oben Links">
+          <p>Kreis oben Links</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2>6</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0448.jpeg" class="Algorithm Bilder" alt="Kreis oben Links">
+          <p>Kreis oben Links</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+    <div class="archive-item">
+      <h2> 7</h2>
+      <p>
+      <table>
+        <tr>
+
+          </td><img src="https://hbk-bs.github.io/the-archives-Chrizz1nk/assets/Algorithm/IMG_0449.jpeg" class="Algorithm Bilder" alt="Kreis oben Rechts">
+          <p>Kreis oben Rechts</p>
+          </td>
+          </p>
+      </table>
+    </div>
+
+  
+
+  </section>
+
+
+  
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archiv</title>
+    <style>
+        body {
+            background-color: rgb(255, 214, 152);
+            margin: 0;
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+
+        p {
+            font-size: 18px;
+            color: rgb(255, 255, 255);
+            line-height: 25px;
+        }
+
+        h1 {
+            margin-bottom: 70px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .intro-text {
+            color: rgb(255, 255, 255);
+            text-align: start;
+            font-size: 50px;
+        }
+
+        header {
+            background-color: #492424;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .archive {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .archive-item {
+            background-color: rgb(88, 39, 39);
+            border: 1px solid #612c2c;
+            border-radius: 8px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .archive-item h2 {
+            margin-top: 0;
+        }
+
+        .archive-item p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .archive-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+</html>

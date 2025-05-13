@@ -1,0 +1,91 @@
+//HTML
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/addons/p5.sound.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+
+</head>
+
+<body>
+  <main>
+  </main>
+  <script src="sketch.js"></script>
+</body>
+
+</html>
+
+//CSS
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+function keyPressed() {
+  if (key === 's') {
+    const name = prompt(
+      'Enter name',
+      `out-${Date.now()}.png`
+    );
+    save(name);
+  }
+}
+
+
+//JS
+function setup() {
+  createCanvas(200, 200);
+  background(220);
+  stroke("peachpuff");
+  //face
+  fill("peachpuff");
+  triangle(0, -60, 0, 260, 100, 110);
+
+  //kinn
+  fill("peachpuff");
+  rect(0, 160, 70, 100);
+
+  fill("peachpuff");
+  rect(0, 60, 100, 90);
+
+  //stirn
+  fill("peachpuff");
+  triangle(0, 70, 70, 50);
+
+  //auge
+  fill("white");
+  ellipse(50, 50, 50, 50);
+  fill("black");
+  ellipse(40, 50, 30, 30);
+
+  //lippen
+  stroke("red");
+  fill("red");
+  ellipse(67, 170, 30, 10);
+  ellipse(67, 178, 30, 10);
+
+  //nase
+  stroke("peachpuff");
+  fill("lightsalmon");
+  ellipse(80, 122, 20, 13);
+
+  //blush
+  stroke("deeppink");
+  line(30, 120, 50, 90);
+  line(50, 120, 70, 90);
+  line(10, 120, 30, 90);
+
+  //hair
+  stroke("forestgreen");
+  fill("forestgreen");
+  triangle(0, 0, 40, 0, 10, 40);
+  triangle(0, 0, 40, 0, 30, 60);
+  triangle(0, 0, 70, 0, 100, 60);
+  triangle(0, 0, 30, 0, 0, 70);
+}
+
+function draw() {}

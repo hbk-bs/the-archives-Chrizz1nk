@@ -1,0 +1,87 @@
+//HTML
+
+
+//CSS
+body {
+	margin: 0 auto;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+function keyPressed() {
+  if (key === 's') {
+    const name = prompt(
+      'Enter name',
+      `out-${Date.now()}.png`
+    );
+    save(name);
+  }
+}
+
+//JS
+const x = (n) => width * n;
+const y = (n) => height * n;
+const s = (n) => (height > width ? height * n : width * n);
+
+function setup() {
+	createCanvas(250, 250);
+	angleMode(DEGREES);
+	background("black");
+
+	push();
+	translate(width / 2, height / 2);
+	rotate(125);
+	const d = s(0.8);
+	circle(0, 0, d);
+	circle(-d, 0, d);
+	circle(d, 0, d);
+
+	translate(width / 200, height / 200);
+	rotate(100);
+	const a = s(0.8);
+	circle(0, 0, a);
+	circle(-a, 0, a);
+	circle(a, 0, a);
+
+	pop();
+	translate(width / 2, height / 2);
+	rotate(0);
+	const f = s(0.4);
+	circle(0, 0, f);
+	circle(-f, 0, f);
+	circle(f, 0, f);
+
+	push();
+	fill("red");
+	translate(width / 50, height / 0);
+	rotate(90);
+	const h = s(0.4);
+	circle(0, 0, h);
+	circle(-h, 0, h);
+	circle(h, 0, h);
+
+	rotate(90);
+	fill("black");
+	circle(-120, 0, 50);
+	rotate(90);
+	circle(-120, 0, 50);
+	rotate(90);
+	circle(-120, 0, 50);
+	rotate(90);
+	circle(-120, 0, 50);
+	circle(0, 0, 50);
+
+	circle(-120, 110, 50);
+	circle(-120, -110, 50);
+	rotate(180);
+	circle(-120, 110, 50);
+	circle(-120, -110, 50);
+
+	// ellipse(x(0.25), y(0.25), s(0.25), s(0.25));
+	// ellipse(x(0.75), y(0.75), s(0.25), s(0.25));
+}
+
+function draw() {}
